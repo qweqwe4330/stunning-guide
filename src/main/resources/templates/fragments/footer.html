@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ботинки сайта</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+<header th:fragment="footer" class="bg-blue-500 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Codebox</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="/static" th:href="@{/}" class="hover:text-gray-200 transition duration-300">Главная</a></li>
+                <li><a href="/courses" th:href="@{/courses}"
+                       class="hover:text-gray-200 transition duration-300">Курсы</a></li>
+                <li><a href="/profile" th:href="@{/profile}"
+                       class="hover:text-gray-200 transition duration-300">Профиль</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<script>
+    console.log('Header script loaded');
+</script>
+</body>
+</html>

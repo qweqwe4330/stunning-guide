@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+    <link href="/css/reset.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+<div th:insert="~{fragments/header.html :: header}"></div>
+
+<main class="container mx-auto py-8">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-6">Добро пожаловать на главную страницу!</h2>
+    <p class="text-gray-700">Это содержимое главной страницы.</p>
+    <section class="courses-preview">
+        {/* Здесь будет отображаться список курсов */}
+    </section>
+</main>
+
+<footer th:replace="~{fragments/footer.html :: footer}">
+    <p class="text-center text-gray-500 py-4">(c) 2025 Codebox</p>
+</footer>
+
+<script>
+    //Ваш javascript
+    console.log('Home page script loaded');
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Шапка сайта</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+<header th:fragment="header" class="text-black py-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="/static" th:href="@{/}">
+            <img alt="logo" src="/images/CodeBox.svg">
+        </a>
+        <nav>
+            <ul class="flex space-x-4">
+                <li>
+                    <a href="/signin" th:href="@{/signin}" class="hover:text-green-800 transition duration-300 p-8 bg-aqua-50">Sign in</a>
+                </li>
+                <li>
+                    <a href="/signup" th:href="@{/signup}" class="hover:text-green-800 transition duration-300">Sign up</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<script>
+    console.log('Header script loaded');
+</script>
+</body>
+</html>
